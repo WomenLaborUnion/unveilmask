@@ -1,0 +1,30 @@
+/*
+ * nomalized-masker — hover/focus reveal styles.
+ *
+ * Import alongside the JS API:
+ *   import 'nomalized-masker/style.css';
+ */
+
+.nm {
+  cursor: help;
+  border-bottom: 1px dashed currentColor;
+}
+
+.nm-real {
+  display: none;
+}
+
+/* reveal on hover and keyboard focus, or when forced via .nm-revealed */
+.nm:hover .nm-masked,
+.nm:focus .nm-masked,
+.nm:focus-within .nm-masked,
+.nm.nm-revealed .nm-masked {
+  display: none;
+}
+
+.nm:hover .nm-real,
+.nm:focus .nm-real,
+.nm:focus-within .nm-real,
+.nm.nm-revealed .nm-real {
+  display: inline;
+}

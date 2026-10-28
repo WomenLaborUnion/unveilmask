@@ -1,0 +1,30 @@
+{
+  "name": "nomalized-masker",
+  "version": "0.1.0",
+  "description": "Mask the middle of emails, phone numbers, names and more — reveal on hover.",
+  "type": "module",
+  "main": "./src/index.js",
+  "exports": {
+    ".": "./src/index.js",
+    "./mask": "./src/mask.js",
+    "./dom": "./src/dom.js",
+    "./style.css": "./style.css"
+  },
+  "files": [
+    "src",
+    "style.css"
+  ],
+  "scripts": {
+    "test": "node --test"
+  },
+  "keywords": [
+    "masking",
+    "mask",
+    "email",
+    "phone",
+    "privacy",
+    "pii",
+    "hover"
+  ],
+  "license": "MIT"
+}

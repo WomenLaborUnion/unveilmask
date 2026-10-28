@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>nomalized-masker demo</title>
+  <link rel="stylesheet" href="../style.css" />
+  <style>
+    body { font-family: -apple-system, sans-serif; max-width: 640px; margin: 3rem auto; padding: 0 1rem; line-height: 1.8; }
+    li { margin: 0.4rem 0; }
+    code { background: #f2f2f2; padding: 0.1em 0.35em; border-radius: 4px; }
+  </style>
+</head>
+<body>
+  <h1>nomalized-masker</h1>
+  <p>마스킹된 값에 <strong>hover(또는 focus)</strong>하면 원본이 보입니다.</p>
+
+  <h2>auto 감지 (data 속성 + autoInit)</h2>
+  <ul>
+    <li>이메일: <span data-nm-value="hello@example.com"></span></li>
+    <li>전화번호: <span data-nm-value="010-1234-5678"></span></li>
+    <li>이름(name 타입): <span data-nm-value="홍길동" data-nm-type="name"></span></li>
+    <li>일반 문자열: <span data-nm-value="가나다라마바사아자차카"></span></li>
+  </ul>
+
+  <h2>프로그래밍 방식 (mount)</h2>
+  <ul>
+    <li>계좌번호: <span id="account"></span></li>
+    <li>카드번호: <span id="card"></span> <button id="toggle">토글</button></li>
+  </ul>
+
+  <script type="module">
+    import { mount, autoInit, toggle } from '../src/index.js';
+
+    autoInit();
+
+    mount(document.querySelector('#account'), '110-123-456789', { type: 'generic' });
+
+    const card = document.querySelector('#card');
+    mount(card, '1234-5678-9012-3456', { type: 'generic' });
+    document.querySelector('#toggle').addEventListener('click', () => toggle(card));
+  </script>
+</body>
+</html>
