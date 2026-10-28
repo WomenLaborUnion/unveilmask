@@ -4,18 +4,26 @@
   "description": "Mask the middle of emails, phone numbers, names and more — reveal on hover.",
   "type": "module",
   "main": "./src/index.js",
+  "types": "./index.d.ts",
   "exports": {
-    ".": "./src/index.js",
+    ".": {
+      "types": "./index.d.ts",
+      "default": "./src/index.js"
+    },
     "./mask": "./src/mask.js",
     "./dom": "./src/dom.js",
-    "./style.css": "./style.css"
+    "./style.css": "./style.css",
+    "./package.json": "./package.json"
   },
   "files": [
     "src",
+    "index.d.ts",
     "style.css"
   ],
+  "sideEffects": false,
   "scripts": {
-    "test": "node --test"
+    "test": "node --test",
+    "prepublishOnly": "npm test"
   },
   "keywords": [
     "masking",
@@ -26,5 +34,14 @@
     "pii",
     "hover"
   ],
+  "author": "miceplans <miceplans.dev@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/miceplans/nomalized_masker.git"
+  },
+  "homepage": "https://github.com/miceplans/nomalized_masker#readme",
+  "bugs": {
+    "url": "https://github.com/miceplans/nomalized_masker/issues"
+  },
   "license": "MIT"
 }
