@@ -9,7 +9,7 @@ npm install unveilmask
 ```
 
 > 아직 npm에 게시하지 않았다면 저장소를 직접 설치합니다:
-> `npm install miceplans/nomalized_masker`
+> `npm install WomenLaborUnion/unveilmask`
 
 ## 사용법
 

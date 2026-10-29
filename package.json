@@ -37,11 +37,11 @@
   "author": "miceplans <miceplans.dev@gmail.com>",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/miceplans/nomalized_masker.git"
+    "url": "git+https://github.com/WomenLaborUnion/unveilmask.git"
   },
-  "homepage": "https://github.com/miceplans/nomalized_masker#readme",
+  "homepage": "https://github.com/WomenLaborUnion/unveilmask#readme",
   "bugs": {
-    "url": "https://github.com/miceplans/nomalized_masker/issues"
+    "url": "https://github.com/WomenLaborUnion/unveilmask/issues"
   },
   "license": "MIT"
 }
