@@ -1,5 +1,5 @@
 {
-  "name": "nomalized-masker",
+  "name": "unveilmask",
   "version": "0.1.0",
   "description": "Mask the middle of emails, phone numbers, names and more — reveal on hover.",
   "type": "module",

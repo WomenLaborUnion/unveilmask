@@ -1,5 +1,5 @@
 /**
- * Core masking logic for nomalized-masker.
+ * Core masking logic for unveilmask.
  *
  * Masking replaces the *middle* of a value with a mask character,
  * keeping the head and tail recognizable. Pure functions, no DOM.

@@ -1,5 +1,5 @@
 /**
- * DOM bindings for nomalized-masker.
+ * DOM bindings for unveilmask.
  *
  * Renders a masked value that reveals the original on hover / focus.
  * The real value is stored in the DOM — this is a UX convenience,

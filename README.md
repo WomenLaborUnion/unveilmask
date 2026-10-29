@@ -1,11 +1,11 @@
-# nomalized-masker
+# unveilmask
 
 이메일, 전화번호, 이름 등의 개인정보 **가운데를 마스킹**하고, **hover(또는 focus)하면 원본을 보여주는** 라이브러리. 의존성 없는 바닐라 JS (ESM).
 
 ## 설치
 
 ```bash
-npm install nomalized-masker
+npm install unveilmask
 ```
 
 > 아직 npm에 게시하지 않았다면 저장소를 직접 설치합니다:
@@ -16,7 +16,7 @@ npm install nomalized-masker
 ### 1. 마스킹만 필요할 때 (문자열)
 
 ```js
-import { mask } from 'nomalized-masker';
+import { mask } from 'unveilmask';
 
 mask('hello@example.com');                  // 'he*lo@example.com' (auto: email)
 mask('010-1234-5678');                      // '010-****-5678'     (auto: phone)
@@ -38,8 +38,8 @@ mask('가나다라마바사', { maskChar: '●' });    // '가나●●●●사
 CSS를 함께 import해야 hover/focus로 원본이 보입니다.
 
 ```js
-import 'nomalized-masker/style.css';
-import { mount } from 'nomalized-masker';
+import 'unveilmask/style.css';
+import { mount } from 'unveilmask';
 
 mount(document.querySelector('#email'), 'hello@example.com');
 // 렌더링: <span class="nm" tabindex="0">he*lo@example.com</span>
@@ -53,8 +53,8 @@ HTML 속성으로 선언하고 한 번에 초기화할 수도 있습니다.
 <span data-nm-value="홍길동" data-nm-type="name"></span>
 
 <script type="module">
-  import 'nomalized-masker/style.css';
-  import { autoInit } from 'nomalized-masker';
+  import 'unveilmask/style.css';
+  import { autoInit } from 'unveilmask';
   autoInit();
 </script>
 ```
@@ -62,7 +62,7 @@ HTML 속성으로 선언하고 한 번에 초기화할 수도 있습니다.
 프로그래밍으로 제어:
 
 ```js
-import { reveal, hide, toggle, unmount } from 'nomalized-masker';
+import { reveal, hide, toggle, unmount } from 'unveilmask';
 
 reveal(el);  // 항상 원본 표시 (hover 없이)
 toggle(el);  // 상태 토글
@@ -72,7 +72,7 @@ unmount(el); // 원복
 서버 렌더링/템플릿용으로 HTML 문자염도 만들 수 있습니다.
 
 ```js
-import { render } from 'nomalized-masker';
+import { render } from 'unveilmask';
 
 render('hello@example.com');
 // '<span class="nm" tabindex="0" data-nm-value="hello@example.com">...'

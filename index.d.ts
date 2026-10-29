@@ -36,7 +36,7 @@ export interface DomOptions extends MaskOptions {
 
 /**
  * Mount a hover-reveal masker inside an element.
- * Requires a DOM; pair with `nomalized-masker/style.css`.
+ * Requires a DOM; pair with `unveilmask/style.css`.
  */
 export function mount(element: HTMLElement, value: string, options?: DomOptions): HTMLElement;
 
